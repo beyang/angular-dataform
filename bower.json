@@ -2,7 +2,7 @@
   "author": "Angular Dataform Team",
   "name": "angular-dataform",
   "description": "Angular Dataform - Reliable, componentized data form controls for AngularJS",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/sqs/angular-dataform",
   "repository": {
     "type": "git",
@@ -13,6 +13,6 @@
     "./build/angular-dataform.css"
   ],
   "dependencies": {
-    "angular": ">= 1.1.3"
+    "angular": ">= 1.0.7"
   }
 }

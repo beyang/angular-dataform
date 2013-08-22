@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
-     less: {
+    less: {
       dist: {
         files: {
           'dist/<%= pkg.name %>.css': ['modules/**/*.less']

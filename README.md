@@ -2,7 +2,7 @@
 
 ***
 
-[![Build Status](https://secure.travis-ci.org/blendlabs/angular-dataform.png)](http://travis-ci.org/blendlabs/angular-dataform)
+[![Build Status](https://secure.travis-ci.org/sqs/angular-dataform.png)](http://travis-ci.org/sqs/angular-dataform)
 
 ## Usage
 
@@ -18,7 +18,7 @@ The repository comes with the modules pre-built and compressed into the `build/`
 angular.module('myApp', ['dataform']);
 ```
 
-The modules can be found in the [Directives](https://github.com/blendlabs/angular-dataform/tree/master/modules/directives). Check out the readme file associated with each module for specific module usage information.
+The modules can be found in the [Directives](https://github.com/sqs/angular-dataform/tree/master/modules/directives). Check out the readme file associated with each module for specific module usage information.
 
 ## Development
 

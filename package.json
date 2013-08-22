@@ -1,12 +1,12 @@
 {
-  "author": "https://github.com/blendlabs/angular-dataform/graphs/contributors",
+  "author": "https://github.com/sqs/angular-dataform/graphs/contributors",
   "name": "angular-dataform",
   "description": "Angular Dataform - Reliable, componentized data form controls for AngularJS",
   "version": "0.1.1",
-  "homepage": "https://github.com/blendlabs/angular-dataform",
+  "homepage": "https://github.com/sqs/angular-dataform",
   "repository": {
     "type": "git",
-    "url": "git://github.com/blendlabs/angular-dataform.git"
+    "url": "git://github.com/sqs/angular-dataform.git"
   },
   "engines": {
     "node": ">= 0.8.4"

@@ -29,7 +29,7 @@ angular.module('dataform.directives').directive('dfAutocompleteDatalist', ['$doc
       }
 
       var handlers = {
-        select: function($event, value) {
+        select: function($event, $li, value) {
           $event.stopPropagation();
           $event.preventDefault();
 
@@ -39,12 +39,15 @@ angular.module('dataform.directives').directive('dfAutocompleteDatalist', ['$doc
             scope[attrs.ngModel] = value;
           });
 
-          // Allow <input ... df-autocomplete-submit-on-select> option that instructs this
-          // directive to submit its parent form when the user makes a selection.
-          if (attrs.hasOwnProperty('dfAutocompleteSubmitOnSelect')) {
-            if (elem[0].form) {
-              angular.element(elem[0].form).submit();
-            }
+          // Eval <li df-select> or <input df-select>.
+          if ($li.attr('df-select')) {
+            scope.$apply(function() {
+              $li.scope().$eval($li.attr('df-select'));
+            });
+          } else if (attrs.dfSelect) {
+            scope.$apply(function() {
+              scope.$eval(attrs.dfSelect);
+            });
           }
         }
       };
@@ -107,7 +110,7 @@ angular.module('dataform.directives').directive('dfDatalist', [function() {
 
       function selectItem($li, $event) {
         var value = $li.scope().$eval($li.attr('df-value'));
-        scope._$ac_on.select($event, value);
+        scope._$ac_on.select($event, $li, value);
       }
 
       function resetActiveIndex() {
@@ -234,6 +237,9 @@ angular.module('dataform.directives').directive('dfDatalist', [function() {
                   renderActiveIndex();
                 }
               };
+
+              // Watch on both deep-equality changes and object changes. This is so that the watch triggers
+              // if the scope attribute is replaced by a DIFFERENT object that is deep-equal to the previous object.
               scope.$watch(rhs, reactToActiveIndexChange, true);
               scope.$watch('(' + rhs + ')[0]', reactToActiveIndexChange, false);
             }

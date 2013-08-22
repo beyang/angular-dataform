@@ -43,9 +43,6 @@ module.exports = function (grunt) {
       }
     },
      less: {
-      options: {
-        dumpLineNumbers: 'all'
-      },
       dist: {
         files: {
           'dist/<%= pkg.name %>.css': ['modules/**/*.less']

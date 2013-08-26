@@ -2,7 +2,7 @@
   "author": "https://github.com/sqs/angular-dataform/graphs/contributors",
   "name": "angular-dataform",
   "description": "Angular Dataform - Reliable, componentized data form controls for AngularJS",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "homepage": "https://github.com/sqs/angular-dataform",
   "repository": {
     "type": "git",

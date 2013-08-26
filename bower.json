@@ -1,16 +1,20 @@
 {
-  "author": "Angular Dataform Team",
   "name": "angular-dataform",
-  "description": "Angular Dataform - Reliable, componentized data form controls for AngularJS",
   "version": "0.2.1",
-  "homepage": "https://github.com/sqs/angular-dataform",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/sqs/angular-dataform.git"
-  },
   "main": [
-    "./build/angular-dataform.js",
-    "./build/angular-dataform.css"
+    "./dist/angular-dataform.js",
+    "./dist/angular-dataform.css"
+  ],
+  "ignore": [
+    "common",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "doc",
+    "Gruntfile.js",
+    "LICENSE",
+    "modules",
+    "README.md",
+    "package.json"
   ],
   "dependencies": {
     "angular": ">= 1.0.7"
